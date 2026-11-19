@@ -1,0 +1,25 @@
+
+# Database backup
+/storage/backups/*
+!/storage/backups/.htaccess
+
+# Application logs
+/storage/logs/*
+!/storage/logs/.htaccess
+
+# User uploaded photos
+/uploads/users/*
+!/uploads/users/.gitkeep
+
+# Private application uploads
+/uploads/school/*
+!/uploads/school/.htaccess
+
+# Environment secrets
+.env
+.env.*
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store

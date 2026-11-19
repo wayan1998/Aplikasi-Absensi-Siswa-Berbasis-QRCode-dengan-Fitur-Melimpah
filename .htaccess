@@ -1,0 +1,14 @@
+Options -Indexes
+<FilesMatch "\.(sql|md|log)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Halaman error khusus. Jika aplikasi TIDAK di /absensi-smkn1mopuya, ubah awalan path di bawah
+# (sama dengan BASE_URL di app/config/config.php; hapus awalan jika di root domain).
+ErrorDocument 403 /absensi-smkn1mopuya/errors/403.php
+ErrorDocument 404 /absensi-smkn1mopuya/errors/404.php
+ErrorDocument 500 /absensi-smkn1mopuya/errors/500.php
